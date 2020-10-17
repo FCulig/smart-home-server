@@ -3,7 +3,6 @@ package com.culig.filip.smarthome.model;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import org.springframework.beans.factory.annotation.Required;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

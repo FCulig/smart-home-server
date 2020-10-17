@@ -19,8 +19,8 @@ public class Device {
     private String MAC;
     private String name;
 
-    public Device(String MAC) {
-        this.MAC = MAC;
+    public Device(String mac) {
+        this.MAC = mac;
     }
 
     public Device() {
