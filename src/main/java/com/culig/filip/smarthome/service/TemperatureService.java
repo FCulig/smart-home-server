@@ -13,7 +13,6 @@ import java.util.List;
 public class TemperatureService {
     private final TemperatureRepository temperatureRepository;
 
-
     public TemperatureService(TemperatureRepository temperatureRepository) {
         this.temperatureRepository = temperatureRepository;
     }

@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "57f21ee1-4578-4637-b4b4-c7115a40178d",
+		"name": "Smart Home",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Temperature",
+			"item": [
+				{
+					"name": "All Temperatures",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/temperature?from=2020-09-25 14:58:27.893&until=2020-09-25 14:58:29.546",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"temperature"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "2020-09-25 14:58:27.893"
+								},
+								{
+									"key": "until",
+									"value": "2020-09-25 14:58:29.546"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert Temperature",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"temperature\": 22.3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/temperature",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"temperature"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Device",
+			"item": [
+				{
+					"name": "Register device",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mac\": \"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/device",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"device"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
