@@ -1,5 +1,6 @@
 package com.culig.filip.smarthome.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -12,6 +13,7 @@ import javax.persistence.Id;
 @Getter
 @Setter
 @ToString
+@AllArgsConstructor
 public class Device {
     @Id
     @GeneratedValue
