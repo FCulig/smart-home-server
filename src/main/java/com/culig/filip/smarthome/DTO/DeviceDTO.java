@@ -6,13 +6,18 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+import javax.validation.constraints.NotNull;
+
 @Getter
 @Setter
 @ToString
 @AllArgsConstructor
 public class DeviceDTO {
     private long ID;
+
+    @NotNull(message = "Device MAC address is mandatory")
     private String MAC;
+
     private String name;
 
     public DeviceDTO(Device device) {

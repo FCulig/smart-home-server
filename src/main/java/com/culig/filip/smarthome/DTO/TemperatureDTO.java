@@ -12,7 +12,9 @@ import java.sql.Timestamp;
 @ToString
 public class TemperatureDTO {
     private long ID;
+
     private float temperature;
+
     private Timestamp recordedAt;
 
     public TemperatureDTO(Temperature temperature) {

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.lang.Nullable;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.sql.Timestamp;
 import java.util.List;
 
@@ -17,7 +18,7 @@ public class TemperatureController {
     private TemperatureService temperatureService;
 
     @PostMapping
-    public TemperatureDTO saveTemperatureReading(@RequestBody TemperatureDTO temperature) {
+    public TemperatureDTO saveTemperatureReading(@RequestBody @Valid TemperatureDTO temperature) {
         return temperatureService.saveTemperatureMeasurement(temperature);
     }
 
