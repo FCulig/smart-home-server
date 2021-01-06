@@ -14,10 +14,13 @@ public class DeviceService {
     }
 
     public DeviceDTO registerDevice(DeviceDTO deviceDTO) {
-        if (deviceRepository.findDeviceWithMAC(deviceDTO.getMAC()) == null) {
+        Device existingDevice = deviceRepository.findDeviceWithMAC(deviceDTO.getMAC());
+        if (existingDevice == null) {
             Device device = new Device(deviceDTO.getMAC());
             deviceDTO = new DeviceDTO(deviceRepository.save(device));
+            return deviceDTO;
+        } else {
+            return new DeviceDTO(existingDevice);
         }
-        return deviceDTO;
     }
 }

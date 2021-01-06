@@ -1,9 +1,7 @@
 package com.culig.filip.smarthome.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import com.culig.filip.smarthome.DTO.DeviceDTO;
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,6 +12,7 @@ import javax.persistence.Id;
 @Setter
 @ToString
 @AllArgsConstructor
+@EqualsAndHashCode
 public class Device {
     @Id
     @GeneratedValue
@@ -26,5 +25,11 @@ public class Device {
     }
 
     public Device() {
+    }
+
+    public Device(DeviceDTO dto) {
+        this.ID = dto.getID();
+        this.MAC = dto.getMAC();
+        this.name = dto.getName();
     }
 }

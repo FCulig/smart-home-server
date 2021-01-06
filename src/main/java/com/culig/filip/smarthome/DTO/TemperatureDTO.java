@@ -1,6 +1,7 @@
 package com.culig.filip.smarthome.DTO;
 
 import com.culig.filip.smarthome.model.Temperature;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -10,6 +11,7 @@ import java.sql.Timestamp;
 @Getter
 @Setter
 @ToString
+@EqualsAndHashCode
 public class TemperatureDTO {
     private long ID;
 

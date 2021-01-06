@@ -18,12 +18,12 @@ public class TemperatureController {
     private TemperatureService temperatureService;
 
     @PostMapping
-    public TemperatureDTO saveTemperatureReading(@RequestBody @Valid TemperatureDTO temperature) {
+    public TemperatureDTO saveTemperatureReading(@Valid @RequestBody TemperatureDTO temperature) {
         return temperatureService.saveTemperatureMeasurement(temperature);
     }
 
     @GetMapping
-    public List<TemperatureDTO> getTemperatures(@Nullable @RequestParam("from") Timestamp from,@Nullable @RequestParam("until") Timestamp until) {
+    public List<TemperatureDTO> getTemperatures(@Nullable @RequestParam("from") Timestamp from, @Nullable @RequestParam("until") Timestamp until) {
         return temperatureService.getTemperatures(from, until);
     }
 }

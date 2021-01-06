@@ -1,10 +1,7 @@
 package com.culig.filip.smarthome.DTO;
 
 import com.culig.filip.smarthome.model.Device;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import javax.validation.constraints.NotNull;
 
@@ -12,10 +9,11 @@ import javax.validation.constraints.NotNull;
 @Setter
 @ToString
 @AllArgsConstructor
+@EqualsAndHashCode
 public class DeviceDTO {
     private long ID;
 
-    @NotNull(message = "Device MAC address is mandatory")
+    @NotNull(message = "Device MAC address is mandatory.")
     private String MAC;
 
     private String name;
@@ -32,5 +30,9 @@ public class DeviceDTO {
     public DeviceDTO(long l, String mac) {
         this.ID = l;
         this.MAC = mac;
+    }
+
+    public DeviceDTO(@NotNull(message = "Device MAC address is mandatory.") String MAC) {
+        this.MAC = MAC;
     }
 }

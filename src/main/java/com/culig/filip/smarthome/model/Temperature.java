@@ -1,8 +1,6 @@
 package com.culig.filip.smarthome.model;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,6 +11,8 @@ import java.sql.Timestamp;
 @Getter
 @Setter
 @ToString
+@EqualsAndHashCode
+@AllArgsConstructor
 public class Temperature {
     @Id
     @GeneratedValue
